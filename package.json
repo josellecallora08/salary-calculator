@@ -2,5 +2,5 @@
   "name": "payroll-lite-ph",
   "private": true,
   "type": "module",
-  "scripts": { "test": "node tests/payroll.test.js" }
+  "scripts": { "test": "node tests/payroll.test.js && node tests/monthly.test.js" }
 }

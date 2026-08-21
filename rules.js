@@ -3,7 +3,8 @@ export const PAYROLL_RULES = {
   effectiveFrom: "2026-01-01",
   sourceLabel: "Reference assumptions supplied in the payroll PDFs; validate against current official tables before production use.",
   contributions: { sss: 1750, philHealth: 1136, pagIbig: 200 },
-  automaticContributionEstimates: { monthlyWorkdays: 20, sssRate: 0.03847, sssMaximum: 1750, philHealthRate: 0.025, philHealthMaximum: 1136, pagIbigRate: 0.02, pagIbigMaximum: 200 },
+  automaticContributionEstimates: { monthlyWorkdays: 20, sssRate: 0.03852, sssMaximum: 1750, philHealthRate: 0.025, philHealthMaximum: 1136, pagIbigRate: 0.02, pagIbigMaximum: 200 },
+  monthlyPolicy: { version: "MONTHLY-ESTIMATE-2026.1", monthlyWorkdays: 20, absenceDivisor: 20, cutoffAllocation: { 1: 0.5, 2: 0.5 }, holidayTreatment: "Monthly base includes not-worked holidays; worked holidays receive only the configured premium." },
   holidayRules: {
     REGULAR: { notWorked: 1, worked: 2 },
     SPECIAL_NON_WORKING: { notWorked: 0, worked: 1.3 },
