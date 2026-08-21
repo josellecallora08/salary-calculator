@@ -3,9 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Private client-only Philippine semi-monthly payroll estimator." />
+    <meta name="description" content="Free Philippine salary calculator for daily-paid and monthly-paid workers. Estimate semi-monthly pay, unpaid absences, holidays, SSS, PhilHealth, Pag-IBIG, and withholding tax privately in your browser." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Payroll Lite PH" />
+    <meta property="og:title" content="Payroll Lite PH | Philippine Salary Calculator" />
+    <meta property="og:description" content="Estimate Philippine daily or monthly payroll, statutory deductions, holidays, and semi-monthly take-home pay privately in your browser." />
+    <meta property="og:image" content="icon.svg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Payroll Lite PH | Philippine Salary Calculator" />
+    <meta name="twitter:description" content="A private Philippine salary calculator for daily-paid and monthly-paid workers." />
+    <link rel="canonical" href="./" />
     <meta name="theme-color" content="#174a3a" />
-    <title>Payroll Lite PH</title>
+    <title>Payroll Lite PH | Philippine Salary Calculator</title>
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="manifest" href="manifest.json" />
@@ -30,6 +40,42 @@
       <section id="profile-view" class="view"></section>
       <section id="calculator-view" class="view hidden"></section>
       <section id="results-view" class="view hidden"></section>
+      <section class="seo-content" aria-labelledby="about-payroll-lite">
+        <div class="card">
+          <h2 id="about-payroll-lite">Philippine salary calculator</h2>
+          <p>Payroll Lite PH is a private Philippine payroll calculator for estimating daily-paid and monthly-paid salary. Set your salary basis, choose your work schedule, mark unpaid absences, and review detected holidays in a semi-monthly payroll estimate.</p>
+          <div class="seo-grid">
+            <div>
+              <h3>What the calculator estimates</h3>
+              <ul>
+                <li>Daily-paid and monthly-paid basic salary</li>
+                <li>First and second cutoff payouts</li>
+                <li>Unpaid absence deductions</li>
+                <li>Regular and special non-working holiday treatment</li>
+                <li>SSS, PhilHealth, Pag-IBIG, and withholding tax estimates</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Private and offline-friendly</h3>
+              <p>Your payroll profile and saved months stay in your browser. The app can be installed on supported devices and used offline after it has been loaded once.</p>
+              <p><a href="cookies.html">Read the cookie and storage policy</a>.</p>
+            </div>
+          </div>
+          <h3>Common questions</h3>
+          <details>
+            <summary>Can I calculate monthly salary?</summary>
+            <p>Yes. Select Monthly-paid during profile setup and enter the monthly basic salary. The calculator uses the configured monthly policy to estimate cutoff pay and unpaid absence deductions.</p>
+          </details>
+          <details>
+            <summary>Are statutory deductions automatic?</summary>
+            <p>SSS, PhilHealth, Pag-IBIG, and withholding tax are automatically estimated using the bundled rules. Employer-specific settings and payslips should be used for final payroll decisions.</p>
+          </details>
+          <details>
+            <summary>Does the calculator send my salary data to a server?</summary>
+            <p>No. Payroll data is stored locally in this browser. Clearing browser storage or using the Delete local data button removes the saved information.</p>
+          </details>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -47,5 +93,33 @@
       </div>
     </div>
     <script type="module" src="app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Payroll Lite PH",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "Web",
+            "description": "Private Philippine salary calculator for daily-paid and monthly-paid workers.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PHP" },
+            "featureList": [
+              "Daily-paid salary calculation",
+              "Monthly-paid salary calculation",
+              "Unpaid absence calendar",
+              "Philippine holiday pay estimates",
+              "SSS, PhilHealth, Pag-IBIG, and withholding tax estimates",
+              "Offline browser storage"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Payroll Lite PH",
+            "description": "Private Philippine salary calculator for daily-paid and monthly-paid workers."
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
