@@ -1,0 +1,17 @@
+{
+  "name": "Payroll Lite PH",
+  "short_name": "Payroll Lite PH",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f4",
+  "theme_color": "#174a3a",
+  "description": "Private Philippine semi-monthly payroll estimator.",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
