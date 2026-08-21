@@ -1,0 +1,6 @@
+.git
+.gitignore
+node_modules
+tests
+TASK.md
+README.md
