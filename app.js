@@ -149,6 +149,11 @@ const wireSavedMonthButtons = () => { document.querySelectorAll(".load-record").
 const savedMonthObserver = new MutationObserver(wireSavedMonthButtons); savedMonthObserver.observe($("calculator-view"), { childList: true, subtree: true }); wireSavedMonthButtons();
 if (profile) { renderCalculator(); show("calculator-view"); } else { profile = { ...defaults }; renderProfile(); show("profile-view"); }
 setTimeout(wireSavedMonthButtons, 0);
+const COOKIE_CONSENT = "payroll-lite-cookie-consent-v1";
+const cookieBanner = $("cookie-banner");
+if (cookieBanner && !localStorage.getItem(COOKIE_CONSENT)) cookieBanner.classList.remove("hidden");
+$("cookie-accept")?.addEventListener("click", () => { localStorage.setItem(COOKIE_CONSENT, "accepted"); cookieBanner?.classList.add("hidden"); });
+$("cookie-decline")?.addEventListener("click", () => { localStorage.setItem(COOKIE_CONSENT, "declined"); cookieBanner?.classList.add("hidden"); });
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(() => {}));
 
 export { calculate, money };

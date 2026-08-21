@@ -101,6 +101,11 @@ summary { cursor: pointer; font-weight: 800; }
 .two-col { display: grid; grid-template-columns: minmax(0, 1fr) 290px; gap: 18px; }
 .help { color: var(--muted); font-size: 12px; }
 .right { text-align: right; }
+.cookie-banner { position: fixed; right: 22px; bottom: 22px; z-index: 20; display: flex; max-width: 620px; align-items: center; gap: 20px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255, 255, 255, .98); box-shadow: 0 18px 45px rgba(22, 52, 42, .18); }
+.cookie-banner h2 { margin: 0 0 4px; font-size: 17px; }
+.cookie-banner p { margin: 0; color: var(--muted); font-size: 13px; }
+.cookie-actions { display: flex; flex-shrink: 0; gap: 8px; }
 @media (max-width: 760px) { .topbar-inner, .section-head { align-items: flex-start; flex-direction: column; } .topbar-actions { display: flex; width: 100%; } .topbar-actions button { flex: 1; } .grid-2, .grid-3, .summary-grid, .subgrid, .two-col { grid-template-columns: 1fr; } .footer { flex-direction: column; } .card { padding: 18px; } }
+@media (max-width: 600px) { .cookie-banner { right: 12px; bottom: 12px; left: 12px; display: block; } .cookie-actions { margin-top: 14px; } .cookie-actions .button { flex: 1; } }
 @media print { .topbar-actions, .actions, .footer, #calculator-view, #profile-view, #notice, .no-print { display: none !important; } body { background: white; } .shell { padding: 0; max-width: none; } .card { border: 0; box-shadow: none; padding: 0; } .print-only { display: block !important; } }
 .print-only { display: none; }
